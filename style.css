@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  color: white;
+  color: #FFFEFC;
 }
 
 /* Navbar container */
@@ -19,6 +19,18 @@ body {
   padding: 15px 30px;
 }
 
+.nav-left, .nav-right {
+  display: flex;
+  gap: 50px;
+}
+
+
+.navbar p{
+  padding: 15px 30px;
+  color: white;
+  font-family: serif;
+  font-size: 20px;
+}
 /* Logo */
 .logo {
   color: white;
@@ -47,29 +59,29 @@ body {
 .extended-navbar {
   display: flex;
   background-color: #000000;
-  padding: 15px 30px;
+  padding: 210px 30px;
   justify-content: center;
 }
 .extended-navbar p {
-  font-family: georgia;
+  font-family: serif;
+  font-size: 40px;
 }
 
-/* Grid styling */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  background-color: #fce4ec;
-  padding: 10px;
-  border: 2px solid #ec407a;
-  border-radius: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 500px; /* Set each row to be 500px tall */
 }
 
 .grid-container > div {
-  background-color: #f06292;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 5px;
-  font-size: 1.2em;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* hides overflow from object-fit: cover */
+}
+
+.grid-container img {
+  width: 100%;
+  height: 100%;s
+  object-fit: cover;
+  display: block;
 }
